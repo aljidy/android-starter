@@ -58,6 +58,20 @@ dependencies {
     implementation libs.androidx.navigation.fragment.ktx
     implementation libs.androidx.navigation.ui.ktx
 
+    // Coil - Image Network Libs
+    implementation libs.coil.compose
+    implementation libs.coil.network.okhttp
+
+    // Networking libs
+    implementation libs.retrofit2
+    implementation libs.retrofit2.kotlinx.serialization.converter // Only required if you're downloading JSON
+    implementation libs.okhttp3
+    implementation libs.okhttp3.logging.interceptor
+
+
+    // Kotlinx JSON serialisation
+    implementation libs.kotlinx.serialization.json
+
     androidTestImplementation libs.androidx.navigation.testing
 
     testImplementation libs.junit
@@ -100,6 +114,4 @@ dependencies {
 //    implementation 'com.squareup.retrofit2:converter-moshi:2.11.0'
 //    implementation 'com.squareup.okhttp3:okhttp:4.12.0'
 //    implementation 'com.squareup.okhttp3:logging-interceptor:4.12.0'
-
-//        implementation "org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3"
 }
