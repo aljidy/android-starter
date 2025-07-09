@@ -10,7 +10,8 @@ lifecycleRuntimeKtx = "2.9.0"
 activityCompose = "1.10.1"
 composeBom = "2024.04.01"
 mockitoInline = "5.2.0"
-mockitoKotlin = "2.2.0"
+mockitoKotlin = "5.4.0"
+kotlinxCoroutinesTest = "1.10.2"
 
 ktlint = "12.2.0"
 navigationCompose = "2.9.0"
@@ -19,6 +20,9 @@ kotlinSerialization = "1.8.1"
 coil = "3.2.0"
 okhttp3 = "4.12.0"
 retrofit2 = "2.11.0"
+
+turbine = "1.2.0"
+
 
 koin-bom = "4.0.3"
 
@@ -53,6 +57,7 @@ retrofit2-kotlinx-serialization-converter = { module = "com.squareup.retrofit2:c
 # Coil - Image Network Libs
 coil-compose = { module = "io.coil-kt.coil3:coil-compose", version.ref = "coil" }
 coil-network-okhttp = { module = "io.coil-kt.coil3:coil-network-okhttp", version.ref = "coil" }
+coil-test = { module = "io.coil-kt.coil3:coil-test", version.ref = "coil" }
 
 # Kotlin Json Serialisation
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinSerialization" }
@@ -60,20 +65,26 @@ kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serializa
 # Koin - DI
 koin-bom = { module = "io.insert-koin:koin-bom", version.ref = "koin-bom" }
 koin-core = { module = "io.insert-koin:koin-core" }
-koin-android = {module = "io.insert-koin:koin-android"} # , version.ref = "koin_android_version"}
-koin-androidx-compose = {module = "io.insert-koin:koin-androidx-compose"} # , version.ref = "koin_version"}
-koin-androidx-compose-navigation = {module = "io.insert-koin:koin-androidx-compose-navigation"} # , version.ref = "koin_version"}
-koin-test = {module = "io.insert-koin:koin-test"} # , version.ref = "koin_version"}
-koin-test-junit4 = {module = "io.insert-koin:koin-test-junit4"} # , version.ref = "koin_version"}
+koin-android = { module = "io.insert-koin:koin-android" } # , version.ref = "koin_android_version"}
+koin-androidx-compose = { module = "io.insert-koin:koin-androidx-compose" } # , version.ref = "koin_version"}
+koin-androidx-compose-navigation = { module = "io.insert-koin:koin-androidx-compose-navigation" } # , version.ref = "koin_version"}
+koin-test = { module = "io.insert-koin:koin-test" } # , version.ref = "koin_version"}
+koin-test-junit4 = { module = "io.insert-koin:koin-test-junit4" } # , version.ref = "koin_version"}
+
+# Turbine - Flow testing
+turbine = { module = "app.cash.turbine:turbine", version.ref = "turbine" }
 
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+
+kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlinxCoroutinesTest" }
+
 
 androidx-core-testing = { module = "androidx.arch.core:core-testing", version.ref = "coreTesting" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 
 mockito-inline = { module = "org.mockito:mockito-inline", version.ref = "mockitoInline" }
-mockito-kotlin = { module = "com.nhaarman.mockitokotlin2:mockito-kotlin", version.ref = "mockitoKotlin" }
+mockito-kotlin = { module = "org.mockito.kotlin:mockito-kotlin", version.ref = "mockitoKotlin" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

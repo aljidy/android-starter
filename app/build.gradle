@@ -72,15 +72,16 @@ dependencies {
     implementation libs.kotlinx.serialization.json
 
     // Koin - DI
-    implementation(project.dependencies.platform(libs.koin.bom))
-    implementation(libs.koin.core)
+    implementation project.dependencies.platform(libs.koin.bom)
+    implementation libs.koin.core
+    implementation libs.koin.android
+    implementation libs.koin.androidx.compose
+    implementation libs.koin.androidx.compose.navigation
+    testImplementation libs.koin.test
+    testImplementation libs.koin.test.junit4
 
-    // Koin Test features
-    implementation(libs.koin.android)
-    implementation(libs.koin.androidx.compose)
-    implementation(libs.koin.androidx.compose.navigation)
-    testImplementation(libs.koin.test)
-    testImplementation(libs.koin.test.junit4)
+    // Turbine - Flow testing
+    testImplementation libs.turbine
 
     androidTestImplementation libs.androidx.navigation.testing
 
@@ -88,11 +89,15 @@ dependencies {
     testImplementation libs.mockito.inline
     testImplementation libs.mockito.kotlin
     testImplementation libs.androidx.core.testing
+    testImplementation libs.kotlinx.coroutines.test
+
 
     androidTestImplementation libs.androidx.junit
     androidTestImplementation libs.androidx.espresso.core
     androidTestImplementation platform(libs.androidx.compose.bom)
     androidTestImplementation libs.androidx.ui.test.junit4
+    androidTestImplementation libs.coil.test
+
 
     debugImplementation libs.androidx.ui.test.manifest
 
