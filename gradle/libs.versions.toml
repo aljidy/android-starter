@@ -14,7 +14,7 @@ mockitoKotlin = "2.2.0"
 
 ktlint = "12.2.0"
 navigationCompose = "2.9.0"
-kotlinSerialization = "1.8.1" # TODO check if this is versioned seperate to Kotlin
+kotlinSerialization = "1.8.1"
 
 coil = "3.2.0"
 okhttp3 = "4.12.0"
