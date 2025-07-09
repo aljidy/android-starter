@@ -20,6 +20,8 @@ coil = "3.2.0"
 okhttp3 = "4.12.0"
 retrofit2 = "2.11.0"
 
+koin-bom = "4.0.3"
+
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 
@@ -54,6 +56,15 @@ coil-network-okhttp = { module = "io.coil-kt.coil3:coil-network-okhttp", version
 
 # Kotlin Json Serialisation
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinSerialization" }
+
+# Koin - DI
+koin-bom = { module = "io.insert-koin:koin-bom", version.ref = "koin-bom" }
+koin-core = { module = "io.insert-koin:koin-core" }
+koin-android = {module = "io.insert-koin:koin-android"} # , version.ref = "koin_android_version"}
+koin-androidx-compose = {module = "io.insert-koin:koin-androidx-compose"} # , version.ref = "koin_version"}
+koin-androidx-compose-navigation = {module = "io.insert-koin:koin-androidx-compose-navigation"} # , version.ref = "koin_version"}
+koin-test = {module = "io.insert-koin:koin-test"} # , version.ref = "koin_version"}
+koin-test-junit4 = {module = "io.insert-koin:koin-test-junit4"} # , version.ref = "koin_version"}
 
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 
