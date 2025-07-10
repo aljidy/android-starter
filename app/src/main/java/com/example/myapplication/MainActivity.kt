@@ -15,9 +15,7 @@ import kotlinx.serialization.Serializable
 object Greeting
 
 @Serializable
-data class Detail(val name: String)
-
-const val GREETING_NAME: String = "Friend"
+data class Detail(val id: String)
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,15 +27,14 @@ class MainActivity : ComponentActivity() {
             MyApplicationTheme {
                 NavHost(navController = navController, startDestination = Greeting) {
                     composable<Greeting> {
-                        GreetingScreen {
-                            navController.navigate(route = Detail(name = GREETING_NAME))
+                        GreetingScreen { id ->
+                            navController.navigate(route = Detail(id = id))
                         }
                     }
-
                     composable<Detail> { backStackEntry ->
                         val detail: Detail = backStackEntry.toRoute()
                         DetailScreen(
-                            name = detail.name,
+                            name = detail.id,
                             onNavigateBackTapped = { navController.popBackStack() },
                         )
                     }
@@ -46,3 +43,4 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
+
