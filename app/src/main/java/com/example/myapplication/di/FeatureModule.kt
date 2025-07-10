@@ -11,7 +11,6 @@ import retrofit2.converter.kotlinx.serialization.asConverterFactory
 object FeatureModule {
     private const val JSON_MIME_TYPE = "application/json; charset=UTF8"
 
-
     fun provideOkHttpClient(): OkHttpClient {
         val loggingInterceptor =
             HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
@@ -20,7 +19,6 @@ object FeatureModule {
             .addInterceptor(loggingInterceptor)
             .build()
     }
-
 
     fun providesFeatureService(okHttpClient: OkHttpClient): FeatureService =
         Retrofit.Builder()
@@ -33,5 +31,4 @@ object FeatureModule {
             )
             .build()
             .create(FeatureService::class.java)
-
 }

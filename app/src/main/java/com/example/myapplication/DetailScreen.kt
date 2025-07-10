@@ -31,12 +31,11 @@ fun DetailScreen(
     Scaffold(modifier = Modifier.fillMaxSize(), topBar = {
         TopAppBar(
             title = {
-
             },
             navigationIcon = {
                 IconButton(
                     onClick = onNavigateBackTapped,
-                    modifier = Modifier.testTag("BackButton")
+                    modifier = Modifier.testTag("BackButton"),
                 ) {
                     Icon(
                         tint = MaterialTheme.colorScheme.primary,
@@ -44,35 +43,33 @@ fun DetailScreen(
                         contentDescription = "Back to Greeting Screen",
                     )
                 }
-            }
+            },
         )
     }) { innerPadding ->
         DetailScreenContent(Modifier.padding(innerPadding), name)
     }
 }
 
-
 @Composable
 fun DetailScreenContent(
     modifier: Modifier = Modifier,
-    name: String
+    name: String,
 ) {
     Column(
         modifier = modifier.fillMaxSize(),
     ) {
-            Row(modifier = Modifier.fillMaxSize()) {
-                Text(
-                    text = "Hello again $name!",
-                    modifier = Modifier
+        Row(modifier = Modifier.fillMaxSize()) {
+            Text(
+                text = "Hello again $name!",
+                modifier =
+                    Modifier
                         .align(Alignment.CenterVertically)
                         .fillMaxWidth(),
-                    textAlign = TextAlign.Center,
-                )
-            }
-
+                textAlign = TextAlign.Center,
+            )
+        }
     }
 }
-
 
 @Preview(showBackground = true, apiLevel = 33) // Required otherwise text has render problem on 34+
 @Composable

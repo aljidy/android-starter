@@ -4,11 +4,9 @@ import android.app.Application
 import com.example.myapplication.di.FeatureModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
-import org.koin.core.module.dsl.viewModel
 import org.koin.dsl.module
 
 class MyApplication : Application() {
-
     override fun onCreate() {
         super.onCreate()
         initKoin()
@@ -26,12 +24,8 @@ class MyApplication : Application() {
                     single {
                         FeatureModule.providesFeatureService(get())
                     }
-
-
-                }
+                },
             )
-
         }
     }
 }
-

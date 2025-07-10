@@ -19,7 +19,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.myapplication.ui.theme.MyApplicationTheme
 
-
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun GreetingScreen(onNextButtonTap: (String) -> Unit) {
@@ -34,7 +33,7 @@ fun GreetingScreen(onNextButtonTap: (String) -> Unit) {
             Modifier
                 .fillMaxSize()
                 .padding(innerPadding)
-                .padding(horizontal = 16.dp)
+                .padding(horizontal = 16.dp),
         ) { onNextButtonTap("Pal") }
     }
 }
@@ -42,7 +41,7 @@ fun GreetingScreen(onNextButtonTap: (String) -> Unit) {
 @Composable
 private fun GreetingScreenContent(
     modifier: Modifier = Modifier,
-    onNextButtonTap: () -> Unit
+    onNextButtonTap: () -> Unit,
 ) {
     Column(
         modifier = modifier,
@@ -64,9 +63,10 @@ private fun GreetingScreenPreview() {
         val context = LocalContext.current
 
         GreetingScreenContent(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(10.dp),
+            modifier =
+                Modifier
+                    .fillMaxSize()
+                    .padding(10.dp),
             onNextButtonTap = {
                 Toast.makeText(context, "Button tapped", Toast.LENGTH_LONG).show()
                 // TODO make this something that shows in interactive mode
